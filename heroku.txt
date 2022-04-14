@@ -1,0 +1,8 @@
+Heroku login
+Heroku container:login
+heroku config:set ASPNETCORE_ENVIRONMENT=Production -a tododemo-app1
+Heroku stack:set container -a tododemo-app1
+heroku container:push web --app tododemo-app1
+heroku container:release -a tododemo-app1 web
+heroku logs --tail -a tododemo-app1
+
